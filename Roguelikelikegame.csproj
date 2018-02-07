@@ -284,8 +284,12 @@
   <ItemGroup>
     <Compile Include="Assets\Script\Door.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
-    <Compile Include="Assets\Script\Item.cs" />
-    <Compile Include="Assets\Script\ItemManager.cs" />
+    <Compile Include="Assets\Script\Items\Armor.cs" />
+    <Compile Include="Assets\Script\Items\Can.cs" />
+    <Compile Include="Assets\Script\Items\Flask.cs" />
+    <Compile Include="Assets\Script\Items\Item.cs" />
+    <Compile Include="Assets\Script\Items\ItemManager.cs" />
+    <Compile Include="Assets\Script\Items\Weapon.cs" />
     <Compile Include="Assets\Script\Player.cs" />
     <Compile Include="Assets\Script\Status.cs" />
     <Compile Include="Assets\Script\Unit.cs" />

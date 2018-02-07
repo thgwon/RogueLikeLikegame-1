@@ -2,36 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour {
+public class Can : Item {
 
-    private string property;
+    public int hungerChange;
 
-    public string Property
+    public int HungerChange
     {
         get
         {
             return property;
         }
 
-        protected set
+        private set
         {
             property = value;
         }
     }
+    //set은 private
 
-    private new string name;
-
-    public string Name
-    {
-        get
-        {
-            return name;
-        }
-
-        protected set
-        {
-            name = value;
-        }
+    public Can( string itemName, string itemProperty = "Null", int hungerChange = 0 ) : base(itemName, itemProperty) {
+        this.hungerChange = hungerChange;
     }
 
     // Use this for initialization

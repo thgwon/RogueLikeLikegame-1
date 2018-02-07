@@ -44,7 +44,7 @@ public abstract class Unit : MonoBehaviour {
             hp = value;
         }
     }
-    ;
+    
 
     public abstract void changeAttack(int delta);
     public abstract void changeHp(int delta);
