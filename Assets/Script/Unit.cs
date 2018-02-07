@@ -2,22 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Unit : MonoBehaviour {
-    private int attack;
-    private int defense;
-    private int hp;
+public class Unit : MonoBehaviour {
+    protected int attack;
+    protected int defense;
+    protected int hp;
+    public GameObject gameManagerObject;
+    protected GameManager gameManager; 
     private List<Status> statusList;
 
+    private void Start()
+    {
+        gameManager = gameManagerObject.GetComponent<GameManager>();
+    }
     public int Attack
     {
         get
         {
             return attack;
-        }
-
-        set
-        {
-            attack = value;
         }
     }
     public int Defense
@@ -26,11 +27,7 @@ public abstract class Unit : MonoBehaviour {
         {
             return defense;
         }
-
-        set
-        {
-            defense = value;
-        }
+        
     }
     public int Hp
     {
@@ -38,17 +35,20 @@ public abstract class Unit : MonoBehaviour {
         {
             return hp;
         }
-
-        set
-        {
-            hp = value;
-        }
     }
     
-
-    public abstract void changeAttack(int delta);
-    public abstract void changeHp(int delta);
-    public abstract void changeDefense(int delta);
+    public void changeAttack(int delta)
+    {
+        attack += delta;
+    }
+    public void changeHp(int delta)
+    {
+        hp += delta;
+    }
+    public void changeDefense(int delta)
+    {
+        defense += delta;
+    }
 }
 
 
